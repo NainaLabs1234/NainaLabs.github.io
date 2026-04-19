@@ -2,8 +2,63 @@ body {
   margin: 0;
   background: #0b0f17;
   color: white;
+  font-family: "Cutive Mono", monospace;
 }
 
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 600;
+}
+
+.links a {
+  color: #aaa;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #c084fc;
+}
+
+/* HERO */
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: "Unbounded", sans-serif;
+  font-size: 3rem;
+  color: #c084fc;
+  margin: 0;
+}
+
+.hero p {
+  color: #888;
+}
+
+/* SECTION */
+.section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+/* GLASS CARDS */
 .glass {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
@@ -14,13 +69,27 @@ body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
-h1 {
-  font-family: "Unbounded", sans-serif;
+/* CARD */
+.card {
+  width: 260px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
 }
 
-body {
-  margin: 0;
-  background: #0b0f17;
-  color: white;
-  font-family: "Cutive Mono", monospace;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(192, 132, 252, 0.2);
+}
+
+.card h2 {
+  font-family: "Unbounded", sans-serif;
+  margin: 0 0 10px 0;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #666;
 }
