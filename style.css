@@ -165,3 +165,60 @@ nav {
 }
 
 /* TEXT
+/* =========================
+   RESEARCH LOG SYSTEM FIX
+   ========================= */
+
+/* PAGE TITLE (INDEX) */
+.title {
+  font-family: 'Unbounded', sans-serif;
+  text-align: center;
+  margin: 40px 0;
+  font-size: 34px;
+  letter-spacing: 1px;
+}
+
+/* FEED CONTAINER */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* CARD TEXT STRUCTURE */
+.card-date {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ARTICLE PAGE (FULL ENTRY) */
+.article {
+  max-width: 750px;
+  margin: 60px auto;
+  padding: 20px;
+  line-height: 1.7;
+  animation: fadeIn 0.6s ease-out both;
+}
+
+/* BACK BUTTON */
+.back {
+  display: inline-block;
+  margin: 20px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.2s;
+}
+
+.back:hover {
+  color: rgba(200, 220, 255, 0.9);
+}
