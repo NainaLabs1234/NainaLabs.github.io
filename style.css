@@ -222,3 +222,35 @@ nav {
 .back:hover {
   color: rgba(200, 220, 255, 0.9);
 }
+/* MAIN TITLE (PURPLE GLOW) */
+.main-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 52px;
+  text-align: center;
+
+  color: #a78bfa;
+
+  text-shadow:
+    0 0 12px rgba(167, 139, 250, 0.4),
+    0 0 30px rgba(167, 139, 250, 0.2);
+}
+
+/* TAGLINE */
+.tagline {
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+/* GLASS BACKGROUND DEPTH */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(167,139,250,0.08), transparent),
+    radial-gradient(circle at 80% 60%, rgba(120,170,255,0.06), transparent);
+
+  z-index: -1;
+}
