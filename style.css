@@ -19,6 +19,19 @@ body {
   overflow-x: hidden;
 }
 
+/* BACKGROUND GLOW LAYER */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(167,139,250,0.08), transparent),
+    radial-gradient(circle at 80% 60%, rgba(120,170,255,0.06), transparent);
+
+  z-index: -1;
+}
+
 /* FADE IN */
 @keyframes fadeIn {
   from {
@@ -34,7 +47,8 @@ body {
 nav,
 .hero,
 .section,
-footer {
+footer,
+.article {
   animation: fadeIn 0.6s ease-out both;
 }
 
@@ -53,14 +67,11 @@ nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* LOGO - SUBTLE ILLUMINATION */
 .logo {
   font-family: 'Unbounded', sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
-
   color: rgba(255, 255, 255, 0.95);
-
   text-shadow: 0 0 10px rgba(140, 180, 255, 0.15);
 }
 
@@ -83,14 +94,11 @@ nav {
   padding: 80px 20px 40px;
 }
 
-/* TITLE ILLUMINATION */
 .hero h1 {
   font-family: 'Unbounded', sans-serif;
   font-size: 48px;
   letter-spacing: 2px;
-
   color: rgba(255, 255, 255, 0.98);
-
   text-shadow:
     0 0 12px rgba(120, 170, 255, 0.18),
     0 0 30px rgba(120, 170, 255, 0.08);
@@ -102,7 +110,7 @@ nav {
 }
 
 /* =========================
-   SECTION LAYOUT
+   LAYOUT
    ========================= */
 .section {
   display: flex;
@@ -112,10 +120,20 @@ nav {
   flex-wrap: wrap;
 }
 
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 /* =========================
-   GLASS CARDS (ILLUMINATED)
+   GLASS CARDS (SINGLE SYSTEM)
    ========================= */
 .card {
+  display: block;
   width: 260px;
   padding: 22px;
   border-radius: 16px;
@@ -134,21 +152,21 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.08);
 
   transition: all 0.25s ease;
-
   position: relative;
 }
 
-/* SOFT CARD GLOW */
 .card::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 16px;
+
   background: radial-gradient(
     circle at top left,
-    rgba(120, 170, 255, 0.10),
+    rgba(167, 139, 250, 0.10),
     transparent 60%
   );
+
   opacity: 0;
   transition: 0.3s ease;
 }
@@ -157,19 +175,15 @@ nav {
   opacity: 1;
 }
 
-/* HOVER DEPTH + LIGHT LIFT */
 .card:hover {
   transform: translateY(-6px);
   border-color: rgba(180, 210, 255, 0.25);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* TEXT
 /* =========================
-   RESEARCH LOG SYSTEM FIX
+   TEXT STRUCTURE
    ========================= */
-
-/* PAGE TITLE (INDEX) */
 .title {
   font-family: 'Unbounded', sans-serif;
   text-align: center;
@@ -178,17 +192,6 @@ nav {
   letter-spacing: 1px;
 }
 
-/* FEED CONTAINER */
-.container {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-/* CARD TEXT STRUCTURE */
 .card-date {
   font-size: 12px;
   opacity: 0.6;
@@ -198,19 +201,18 @@ nav {
 .card-title {
   font-size: 18px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.92);
 }
 
-/* ARTICLE PAGE (FULL ENTRY) */
+/* =========================
+   ARTICLE PAGE
+   ========================= */
 .article {
   max-width: 750px;
   margin: 60px auto;
   padding: 20px;
   line-height: 1.7;
-  animation: fadeIn 0.6s ease-out both;
 }
 
-/* BACK BUTTON */
 .back {
   display: inline-block;
   margin: 20px;
@@ -222,127 +224,8 @@ nav {
 .back:hover {
   color: rgba(200, 220, 255, 0.9);
 }
-/* MAIN TITLE (PURPLE GLOW) */
-.main-title {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 52px;
-  text-align: center;
 
-  color: #a78bfa;
-
-  text-shadow:
-    0 0 12px rgba(167, 139, 250, 0.4),
-    0 0 30px rgba(167, 139, 250, 0.2);
-}
-
-/* TAGLINE */
-.tagline {
-  text-align: center;
-  margin-top: 10px;
-  opacity: 0.7;
-}
-
-/* GLASS BACKGROUND DEPTH */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-
-  background:
-    radial-gradient(circle at 20% 20%, rgba(167,139,250,0.08), transparent),
-    radial-gradient(circle at 80% 60%, rgba(120,170,255,0.06), transparent);
-
-  z-index: -1;
-}
-/* ENTRY CARDS */
-.entry-card {
-  display: block;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 20px;
-
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-
-  text-decoration: none;
-  color: white;
-}
-
-.entry-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.entry-content {
-  padding: 16px;
-}
-
-.entry-date {
-  font-size: 12px;
-  opacity: 0.6;
-}
-
-.entry-title {
-  margin-top: 6px;
-  font-size: 18px;
-  font-weight: 600;
-}
-/* MAIN TITLE (PURPLE GLOW) */
-.main-title {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 52px;
-  text-align: center;
-
-  color: #a78bfa;
-
-  text-shadow:
-    0 0 12px rgba(167, 139, 250, 0.4),
-    0 0 30px rgba(167, 139, 250, 0.2);
-}
-
-/* TAGLINE */
-.tagline {
-  text-align: center;
-  margin-top: 10px;
-  opacity: 0.7;
-}
-
-/* GLASS BACKGROUND DEPTH */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-
-  background:
-    radial-gradient(circle at 20% 20%, rgba(167,139,250,0.08), transparent),
-    radial-gradient(circle at 80% 60%, rgba(120,170,255,0.06), transparent);
-
-  z-index: -1;
-}
-
-/* CARDS */
-.card {
-  display: block;
-  width: 260px;
-  padding: 22px;
-  border-radius: 16px;
-
-  text-align: center;
-  font-size: 16px;
-
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-
-  transition: all 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  background: rgba(255,255,255,0.1);
-}
-/* ENTRY PAGE UI */
-
+/* ENTRY PAGE */
 .entry-title {
   font-family: 'Couturier New', serif;
   font-size: 38px;
@@ -381,6 +264,42 @@ body::before {
   font-size: 20px;
 }
 
+/* ENTRY CARDS */
+.entry-card {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  text-decoration: none;
+  color: white;
+}
+
+.entry-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.entry-content {
+  padding: 16px;
+}
+
+.entry-date {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.entry-title {
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* SHARE */
 .share {
   margin-top: 30px;
   display: flex;
