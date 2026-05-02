@@ -1,21 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Entry 1</title>
+  <title>Extra Senses</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <a class="back" href="index.html">← Back</a>
+  <a class="back" href="research.html">← Back</a>
 
   <div class="article">
 
-    <h1>Entry 1 Title</h1>
+    <h1>What If Humans Have Senses We Haven’t Evolved to Perceive?</h1>
 
-    <p>Your research content goes here.</p>
+    <p>PASTE YOUR FULL TEXT HERE</p>
 
   </div>
 
 </body>
 </html>
+/* MAIN TITLE (PURPLE GLOW) */
+.main-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 52px;
+  text-align: center;
+
+  color: #a78bfa;
+
+  text-shadow:
+    0 0 12px rgba(167, 139, 250, 0.4),
+    0 0 30px rgba(167, 139, 250, 0.2);
+}
+
+/* TAGLINE */
+.tagline {
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+/* GLASS BACKGROUND DEPTH */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(167,139,250,0.08), transparent),
+    radial-gradient(circle at 80% 60%, rgba(120,170,255,0.06), transparent);
+
+  z-index: -1;
+}.card {
+  display: block;
+  width: 260px;
+  padding: 22px;
+  border-radius: 16px;
+
+  text-align: center;
+  font-size: 16px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.1);
+}
