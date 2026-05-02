@@ -341,3 +341,57 @@ body::before {
   transform: translateY(-6px);
   background: rgba(255,255,255,0.1);
 }
+/* ENTRY PAGE UI */
+
+.entry-title {
+  font-family: 'Couturier New', serif;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.hook {
+  font-size: 16px;
+  opacity: 0.75;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.meta {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.featured-image img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.teaser {
+  padding: 12px;
+  border-left: 3px solid rgba(167,139,250,0.6);
+  margin-bottom: 25px;
+  opacity: 0.85;
+}
+
+.content h2 {
+  margin-top: 30px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 20px;
+}
+
+.share {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.share button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  cursor: pointer;
+}
