@@ -113,11 +113,10 @@ nav {
    LAYOUT
    ========================= */
 .section {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   padding: 40px;
-  flex-wrap: wrap;
 }
 
 .container {
@@ -134,8 +133,8 @@ nav {
    ========================= */
 .card {
   display: block;
-  width: 260px;
-  padding: 22px;
+  width: 100%;
+  padding: 28px;
   border-radius: 16px;
 
   text-decoration: none;
