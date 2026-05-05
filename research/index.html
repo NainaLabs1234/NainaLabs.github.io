@@ -2,34 +2,21 @@
 <html>
 <head>
   <title>Research Log</title>
- <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../website/styles.css">
 </head>
 
 <body>
 
-  <nav>
-    <div class="logo">Research Log</div>
-    <div class="links">
-      <a href="index.html">Home</a>
-    </div>
-  </nav>
-
-  <div class="hero">
-    <h1>Research Log</h1>
-    <p>Explorations into perception, systems, and reality.</p>
-  </div>
-
   <div class="container">
+    <h1 class="title">Research Log</h1>
+    <p style="opacity:0.6; margin-bottom:30px;">
+      Explorations into perception, systems, and reality.
+    </p>
 
-    <a class="entry-card" href="entry1.html">
-      <img src="https://picsum.photos/600/300" alt="">
-      <div class="entry-content">
-        <div class="entry-date">May 2, 2026</div>
-        <div class="entry-title">What If Humans Have Senses We Haven’t Evolved to Perceive?</div>
-      </div>
-    </a>
-
+    <div id="feed" class="grid"></div>
   </div>
+
+  <script src="entry.js"></script>
 
 </body>
 </html>
